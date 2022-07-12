@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#111111">
+  <title>Фото от Гульнары</title>
+  <link rel="preload" href="fonts/PoppinsRegular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/PoppinsMedium.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/MontserratSemiBold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/MontserratExtraBold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/vendor.css">
+  <link rel="stylesheet" href="css/main.css">
+  <script defer src="js/main.js"></script>
+</head>
+
+<body class="page__body">
+  <div class="site-container">
+    <header class="header">
+  <div class="container">
+    <div class="header__inner">
+      <div class="header__logo">
+        <a href="index.html" class="logo">
+          <h3 class="logo__title">
+            Гульнара.
+          </h3>
+        </a>
+      </div>
+
+      <nav class="nav header__nav" title="Main navigation">
+        <ul class="list-reset nav__list">
+          <li class="nav__item"><a href="portfolio.html" class="nav__link">Портфолио</a></li>
+          <li class="nav__item"><a href="testimonials.html" class="nav__link">Отзывы</a></li>
+          <li class="nav__item"><a href="about.html" class="nav__link">Обо мне</a></li>
+        </ul>
+      </nav>
+      <div class="header__call">
+        <button class="btn-reset call" data-graph-path="request">
+          Оставить заявку
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
+    <main class="main">
+      <section class="portfolio">
+  <div class="container">
+    <h2 class="title portfolio__title">
+      Мои фотографии
+    </h2>
+
+    <div class="swiper swiper__portfolio">
+      <div class="swiper-wrapper swiper__portfolio-wrapper">
+        <div class="swiper-slide swiper__portfolio-slider">
+          <picture>
+            <source srcset="img/slide1.avif" type="image/avif">
+            <source srcset="img/slide1.webp" type="image/webp">
+            <img loading="lazy" src="img/slide1.jpeg" class="swiper__portfolio-img" alt="">
+          </picture>
+        </div>
+        <div class="swiper-slide swiper__portfolio-slider">
+          <picture>
+            <source srcset="img/slide2.avif" type="image/avif">
+            <source srcset="img/slide2.webp" type="image/webp">
+            <img loading="lazy" src="img/slide2.jpeg" class="swiper__portfolio-img" alt="">
+          </picture>
+        </div>
+        <div class="swiper-slide swiper__portfolio-slider">
+          <picture>
+            <source srcset="img/slide3.avif" type="image/avif">
+            <source srcset="img/slide3.webp" type="image/webp">
+            <img loading="lazy" src="img/slide3.jpeg" class="swiper__portfolio-img" alt="">
+          </picture>
+        </div>
+
+      </div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+  </div>
+</section>
+    </main>
+
+    <footer class="footer">
+  <div class="container">
+    <div class="socials">
+      <p class="socials__title">
+        Мои соцсети:
+      </p>
+
+      <div class="socials__icons">
+        <a href="https://vk.com/bazinga98" target="_blank">
+          <svg class="socials__icons-img">
+            <use xlink:href="img/sprite.svg#vk"></use>
+          </svg>
+        </a>
+        <a href="https://www.instagram.com/______starry_______/" target="_blank">
+          <svg class="socials__icons-img">
+            <use xlink:href="img/sprite.svg#inst"></use>
+          </svg>
+        </a>
+
+      </div>
+    </div>
+  </div>
+</footer>
+    <div class="graph-modal">
+  <div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="request">
+    <button class="btn-reset js-modal-close graph-modal__close" aria-label="Закрыть модальное окно">
+      <img class="graph-modal__close-white" loading="lazy" src="img/svg/close.svg" class="image" width="30" height="30" alt="Close">
+    </button>
+    <div class="graph-modal__content">
+      <div class="graph-modal__title">
+        Оставить заявку
+      </div>
+
+      <div class="graph-modal__text">
+        Заполните форму ниже и я свяжусь с вами в ближайшее время!
+      </div>
+
+      <form method="POST" action="mail.php" enctype="multipart/form-data" class="form">
+        <input type="hidden" name="admin_email[]" value="georgthevic@gmail.com">
+        <input type="hidden" name="form_subject" value="Тема письма">
+        <label class="form__label">
+          <input type="text" name="Имя" class="input-reset graph-modal__input input-name" placeholder="Ваше имя">
+          <input type="email" name="Почта" class="input-reset graph-modal__input" placeholder="Ваш e-mail">
+          <input type="tel" name="Номер" class="input-reset graph-modal__input input-tel" placeholder="Ваш телефон">
+        </label>
+        <button type="submit" class="btn-reset btn btn--pink">Отправить</button>
+
+      <div class="contacts contacts--modal">
+        <div class="tel tel__modal">
+          +7 999 999-99-99
+        </div>
+        <div class="email tel__modal">
+          random@mial.com
+        </div>
+      </div>
+    </form>
+    </div>
+  </div>
+</div>
+  </div>
+</body>
+
+</html>
